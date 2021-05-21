@@ -17,6 +17,12 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: ArtifactoryGenericDownload@3
+  inputs:
+    connection: 'Kayal_Art'
+    specSource: 'file'
+    file: 'pavan-generic/test.sln'
+    failNoOp: true
 - task: ArtifactoryNuGet@2
   inputs:
     command: 'restore'
