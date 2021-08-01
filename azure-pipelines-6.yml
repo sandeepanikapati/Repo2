@@ -19,5 +19,7 @@ steps:
   displayName: 'Run a multi-line script'
 - task: PublishSymbols@2
   inputs:
-    SearchPattern: '**/bin/**/*.pdb'
+    SymbolsFolder: bin
+    SearchPattern: '**/*.pdb'
+    IndexSources: false
     SymbolServerType: 'TeamServices'
