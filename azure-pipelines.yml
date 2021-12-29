@@ -17,6 +17,20 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: ArtifactoryGenericDownload@3
+  inputs:
+    connection: 'Gaja-Art'
+    specSource: 'taskConfiguration'
+    fileSpec: |
+      {
+        "files": [
+          {
+            "pattern": "aptiolicensetest/*.jar",
+            "target": "/home/vsts/work/r1/a/"
+          }
+        ]
+      }
+    failNoOp: true
 - task: ArtifactoryGenericUpload@2
   inputs:
     artifactoryService: 'Gaja-Art'
@@ -25,7 +39,7 @@ steps:
       {
         "files": [
           {
-            "pattern": "/home/vsts/work/r1/a/*",
+            "pattern": "/home/vsts/work/r1/a/*.jar",
             "target": "broad-test/"
           }
         ]
