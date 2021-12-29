@@ -17,9 +17,17 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
-- task: ArtifactoryToolsInstaller@1
+- task: ArtifactoryGenericDownload@3
   inputs:
-    artifactoryService: 'Kayal_Art'
-    cliInstallationRepo: 'JFrog_CLI'
-    installCustomVersion: true
-    cliVersion: '1.43.2'
+    connection: 'Gaja-Art'
+    specSource: 'taskConfiguration'
+    fileSpec: |
+      {
+        "files": [
+          {
+            "pattern": "/home/vsts/work/r1/a/*.jar",
+            "target": "aptiolicensetest/"
+          }
+        ]
+      }
+    failNoOp: true
