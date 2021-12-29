@@ -25,7 +25,7 @@ steps:
       {
         "files": [
           {
-            "pattern": "/home/vsts/work/r1/a/*.jar",
+            "pattern": "/home/vsts/work/r1/a/*",
             "target": "broad-test/"
           }
         ]
