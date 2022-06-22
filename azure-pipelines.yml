@@ -19,13 +19,13 @@ steps:
   displayName: 'Run a multi-line script'
 - task: ArtifactoryGenericDownload@3
   inputs:
-    connection: 'Gaja-Art'
+    connection: 'jy_prd'
     specSource: 'taskConfiguration'
     fileSpec: |
       {
         "files": [
           {
-            "pattern": "aptiolicensetest/*.jar",
+            "pattern": "jana-local-maven/at/oeamtc/gradle/*",
             "target": "/home/vsts/work/r1/a/"
           }
         ]
@@ -33,7 +33,7 @@ steps:
     failNoOp: true
 - task: ArtifactoryGenericUpload@2
   inputs:
-    artifactoryService: 'Gaja-Art'
+    artifactoryService: 'jy_prd'
     specSource: 'taskConfiguration'
     fileSpec: |
       {
@@ -45,3 +45,4 @@ steps:
         ]
       }
     failNoOp: true
+
