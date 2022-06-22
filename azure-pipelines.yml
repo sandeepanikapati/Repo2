@@ -26,28 +26,17 @@ steps:
         "files": [
           {
             "pattern": "gaja-maven-local/com/*",
-            "target": "/home/vsts/work/r1/a/"
+            "target": "/home/vsts/work/r1/a/",
+               "recursive": "true",
+               "flat": "false"
           }
         ]
       }
+    
     failNoOp: true
 - task: CmdLine@2
   inputs:
     script: 'find /home/vsts/work/r1/a/ -type d' 
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
-- task: ArtifactoryGenericUpload@2
-  inputs:
-    artifactoryService: 'clouddsein'
-    specSource: 'taskConfiguration'
-    fileSpec: |
-      {
-        "files": [
-          {
-            "pattern": "/home/vsts/work/r1/a/*.jar",
-            "target": "broad-test/"
-          }
-        ]
-      }
-    failNoOp: true
 
