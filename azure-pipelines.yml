@@ -19,13 +19,13 @@ steps:
   displayName: 'Run a multi-line script'
 - task: ArtifactoryGenericDownload@3
   inputs:
-    connection: 'jy_prd'
+    connection: 'clouddsein'
     specSource: 'taskConfiguration'
     fileSpec: |
       {
         "files": [
           {
-            "pattern": "jana-local-maven/at/oeamtc/gradle/*",
+            "pattern": "gaja-maven-local/com/*",
             "target": "/home/vsts/work/r1/a/"
           }
         ]
@@ -33,7 +33,7 @@ steps:
     failNoOp: true
 - task: ArtifactoryGenericUpload@2
   inputs:
-    artifactoryService: 'jy_prd'
+    artifactoryService: 'clouddsein'
     specSource: 'taskConfiguration'
     fileSpec: |
       {
