@@ -33,7 +33,7 @@ steps:
     failNoOp: true
 - task: CmdLine@2
   inputs:
-    script: 'ls -lart /home/vsts/work/r1/a/' 
+    script: 'find /home/vsts/work/r1/a/ -type d' 
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 - task: ArtifactoryGenericUpload@2
