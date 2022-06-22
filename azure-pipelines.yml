@@ -32,7 +32,7 @@ steps:
           }
         ]
       }
-    
+    projectKey: pro2
     failNoOp: true
 - task: CmdLine@2
   inputs:
