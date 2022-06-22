@@ -31,6 +31,11 @@ steps:
         ]
       }
     failNoOp: true
+- task: CmdLine@2
+  inputs:
+    script: 'ls -lart' 
+    #workingDirectory: # Optional
+    #failOnStderr: false # Optional
 - task: ArtifactoryGenericUpload@2
   inputs:
     artifactoryService: 'clouddsein'
