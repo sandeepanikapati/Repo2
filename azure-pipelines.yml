@@ -33,7 +33,7 @@ steps:
     failNoOp: true
 - task: CmdLine@2
   inputs:
-    script: 'ls -lart $AGENT_WORKFOLDER' 
+    script: 'ls -lart /home/vsts/work/r1/a/' 
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 - task: ArtifactoryGenericUpload@2
