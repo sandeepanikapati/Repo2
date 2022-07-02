@@ -47,7 +47,7 @@
       projectKey: pro2
   - task: CmdLine@2
     inputs:
-      script: 'find /tmp/ -type d' 
+      script: 'find /tmp/com/ -type d' 
       #workingDirectory: # Optional
       #failOnStderr: false # Optional
 
