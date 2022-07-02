@@ -36,8 +36,8 @@
       buildName: '$(Build.DefinitionName)'
       buildNumber: '$(Build.BuildNumber)'
       projectKey: pro2
+      includeEnvVars: true
       failNoOp: true
-    
   - task: CmdLine@2
     inputs:
       script: 'find /home/vsts/work/r1/a/ -type d' 
