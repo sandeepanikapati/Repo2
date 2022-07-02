@@ -32,8 +32,12 @@
             }
           ]
         }
+      collectBuildInfo: true
+      buildName: '$(Build.DefinitionName)'
+      buildNumber: '$(Build.BuildNumber)'
       projectKey: pro2
       failNoOp: true
+    
   - task: CmdLine@2
     inputs:
       script: 'find /home/vsts/work/r1/a/ -type d' 
