@@ -26,7 +26,7 @@
           "files": [
             {
               "pattern": "gaja-maven-local/*",
-              "target": "/",
+              "target": "/tmp/",
                 "recurse": "true",
                 "flat": "false"
             }
@@ -47,7 +47,7 @@
       projectKey: pro2
   - task: CmdLine@2
     inputs:
-      script: 'find / -type d' 
+      script: 'find /tmp/ -type d' 
       #workingDirectory: # Optional
       #failOnStderr: false # Optional
 
