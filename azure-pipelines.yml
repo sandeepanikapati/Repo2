@@ -38,6 +38,13 @@
       projectKey: pro2
       includeEnvVars: true
       failNoOp: true
+
+  - task: ArtifactoryPublishBuildInfo@1
+    inputs:
+      artifactoryService: 'clouddsein'
+      buildName: '$(Build.DefinitionName)'
+      buildNumber: '$(Build.BuildNumber)'
+      projectKey: pro2
   - task: CmdLine@2
     inputs:
       script: 'find /home/vsts/work/r1/a/ -type d' 
