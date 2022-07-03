@@ -7,7 +7,7 @@
   - master
 
   pool:
-    vmImage: ubuntu-latest
+    vmImage: san-ubuntu
 
   steps:
   - script: echo Hello, world!
